@@ -1,0 +1,8 @@
+streamlit
+peft
+transformers
+torch
+accelerate
+trl
+datasets
+huggingface-hub
