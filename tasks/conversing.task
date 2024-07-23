@@ -17,3 +17,5 @@ HELPER [USER]: I do not remember, but, I feel really sad and I miss my dog a lot
 You must provide your response in the following format:
 HELPER [USER]: ...
 
+Following the context to the conversation, you need to provide the next response to this conversation in the format above.
+

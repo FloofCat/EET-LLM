@@ -22,14 +22,14 @@ Here is a simplified workflow of this LLM.
 
 You may also test out EET-LLM hosted via Streamlit: https://eet-llm.streamlit.app/
 
-Any feedback and other improvements can be reported to the authors. Emails for the same can be found in the Authors section.
+Any feedback and other improvements can be reported to the authors in the Issues section of this repo. If not, you may also send an email to the Authors (mentioned in the Authors section).
 
 ## Presentation @ CDAC
 This work was also presented to several interns and faculties at the Centre for Development of Advanced Computing, Kolkata. This presentation was done by Advik Raj Basani.
 
 [![Video Thumbnail](https://github.com/user-attachments/assets/d5006d98-4839-4a91-8b94-5789d4b9937f)](https://drive.google.com/file/d/1kjE41pco6gp6HdtIH6pXvRVaeHL1jbLH/view)
 
-The same presentation can be found [here](https://drive.google.com/file/d/1qw1xvkzGdKF4lDxsmxI8P7wcsWpLoO7H/view?usp=sharing).
+The same presentation can be found [here](https://drive.google.com/file/d/1f6vjsO0B6a6cC24xPqrHmi_2mSz7JRir/view?usp=sharing).
 
 ## Literature Review
 ### Papers and Publications

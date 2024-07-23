@@ -32,11 +32,14 @@ def generate_reward_score(prompt):
     score = 0
     emotion_detected = "neutral"
     for line in resp.split("\n"):
-        if "SCORE:" in line:
-            score = float(line.split("SCORE: ")[1])
-        
-        if "EMOTION DETECTED:" in line:
-            emotion_detected = line.split("EMOTION DETECTED: ")[1]
+        try:
+            if "SCORE:" in line:
+                score = float(line.split("SCORE: ")[1])
+            
+            if "EMOTION DETECTED:" in line:
+                emotion_detected = line.split("EMOTION DETECTED: ")[1]
+        except:
+            pass
             
     print("LOGS: " + resp)
     return score, emotion_detected

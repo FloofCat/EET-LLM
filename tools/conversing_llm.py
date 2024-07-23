@@ -25,8 +25,11 @@ def generate_possible_user_prompt(context):
     
     user_pred = ""
     for line in resp.split("\n"):
-        if "HELPER [USER]:" in line:
-            user_pred += line.split("HELPER [USER]: ")[1]
+        try:
+            if "HELPER [USER]:" in line:
+                user_pred += line.split("HELPER [USER]: ")[1]
+        except:
+            pass
     
     return user_pred
 

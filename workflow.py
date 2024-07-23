@@ -24,6 +24,12 @@ def generate_output(prompt):
     context_non += "\nUSER:" + prompt
     topics = dialogue_gen.generate_topics(context_non)
     
+    if topics == []:
+        resp = generate_topic_output(prompt, "Validate user's emotions.")
+        context_old += "\nASSISTANT:" + resp
+        context_non += "\nASSISTANT:" + resp
+        return resp
+    
     # best variables
     best_score = 0
     best_topic = ""
@@ -31,7 +37,11 @@ def generate_output(prompt):
     
     for topic in topics:
         resp = generate_topic_output(prompt, topic)
-        predicted_prompt = conversing_llm.generate_possible_user_prompt(context_non)
+        temp_context = context_non + "\nASSISTANT:" + resp
+        predicted_prompt = conversing_llm.generate_possible_user_prompt(temp_context)
+        
+        if predicted_prompt == "":
+            continue
         
         score, _ = rlsetup.generate_reward_score(predicted_prompt)
         if score > best_score:
